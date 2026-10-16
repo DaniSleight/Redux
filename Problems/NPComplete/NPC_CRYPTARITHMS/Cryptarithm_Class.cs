@@ -10,27 +10,27 @@ class CRYPTARITHMS : IProblem<CryptarithmSolver, CryptarithmVerifier, Cryptarith
     // --- Fields ---
     public string problemName {get;} = "Cryptarithms";
     public string problemLink {get;} = "https://en.wikipedia.org/wiki/Verbal_arithmetic";
-    public string formalDefinition {get;} = "TODO";
+    public string formalDefinition {get;} = "Cryptarithms are a type of mathematical game consisting of a mathematical equation among unknown numbers, whose digits are represented by letters of the alphabet. The goal is to identify the value of each letter.";
     public string problemDefinition {get;} = "A type of verbal arithmetic puzzle in which a set of words is written down in the form of a long addition sum or some other mathematical problem. The object is to replace the letters of the alphabet with decimal digits to make a valid arithmetic sum.";
     public string inputDescription {get;} = "Arithmetic equation made up of letters";
     public string outputDescription {get;} = "True or False";
-    public string source {get;} = "Eppstein, D. On the np-completeness of cryptarithms. Computer Science Department of Columbia University, New York, NY.";
-    public string sourceLink {get;} = "https://dl.acm.org/doi/pdf/10.1145/24658.2466";
-    private static readonly string _defaultInstance = "SEND+MONEY=MONEY";
+    public string source {get;} = "D Epstein. 1987. On the NP-completeness of cryptarithms. SIGACT News 18, 3 (April 1987), 38–40. https://doi.org/10.1145/24658.24662";
+    public string sourceLink {get;} = "https://doi.org/10.1145/24658.24662";
+    private static readonly string _defaultInstance = "SEND+MORE=MONEY";
     public string defaultInstance {get;} = _defaultInstance;
     // Short descriptive sentence with a concrete example. Consumed by
     // /ProblemProvider/info and by parse-error responses; this is the
     // canonical place to tell an LLM (or a human, or the GUI) what
     // shape your instance/certificate strings take.
     public string instanceFormat {get;} = "TODO: describe the instance string format with an embedded example, e.g. 'Boolean formula in 3-CNF, clauses joined by `&`. Example: (x1 | !x2 | x3) & (!x1 | x3 | x1)'";
-    public string certificateFormat {get;} = "TODO: describe the certificate string the verifier accepts with an embedded example, e.g. '(x1:True,x2:False,x3:True) -- one variable:Boolean pair per variable, comma-separated'";
+    public string certificateFormat {get;} = "";
     public string instance {get;set;} = string.Empty;
     public string wikiName {get;} = "";
     public CryptarithmSolver defaultSolver {get;} = new CryptarithmSolver();
     public CryptarithmVerifier defaultVerifier {get;} = new CryptarithmVerifier();
     public CryptarithmVisualization defaultVisualization {get;} = new CryptarithmVisualization();
     public ComplexityClass complexityClass { get; } = ComplexityClass.NPComplete;
-    public ProblemType problemType { get; } = ProblemType.SetsAndPartitions;
+    public ProblemType problemType { get; } = ProblemType.GamesAndPuzzles;
     public string[] contributors {get;} = { "Dani Sleight", "Brayden Weisbeck" };
     // Declared, not derived — do NOT infer this from which Problems/<Folder>/ this file
     // lives under. The folder is a filing convention only and is wrong for a dozen-plus
