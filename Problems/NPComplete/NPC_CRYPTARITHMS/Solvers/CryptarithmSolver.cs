@@ -20,7 +20,10 @@ class CryptarithmSolver : ISolver<CRYPTARITHMS> {
     // public string complexity {get;} = "TODO";
     public bool timerHasExpired { get; set; }
 
+    public string sourceFile = SourceFile.Path();
+
     // --- Methods Including Constructors ---
+
     public CryptarithmSolver() {}
 
     public string solve(CRYPTARITHMS problem){

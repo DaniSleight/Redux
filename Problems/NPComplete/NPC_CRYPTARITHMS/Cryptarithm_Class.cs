@@ -16,7 +16,7 @@ class CRYPTARITHMS : IProblem<CryptarithmSolver, CryptarithmVerifier, Cryptarith
     public string outputDescription {get;} = "True or False";
     public string source {get;} = "Eppstein, D. On the np-completeness of cryptarithms. Computer Science Department of Columbia University, New York, NY.";
     public string sourceLink {get;} = "https://dl.acm.org/doi/pdf/10.1145/24658.2466";
-    private static readonly string _defaultInstance = "SEND+MONEY=MONEY";
+    private static readonly string _defaultInstance = "\"SEND+MORE=MONEY\", 10";
     public string defaultInstance {get;} = _defaultInstance;
     // Short descriptive sentence with a concrete example. Consumed by
     // /ProblemProvider/info and by parse-error responses; this is the
@@ -32,6 +32,9 @@ class CRYPTARITHMS : IProblem<CryptarithmSolver, CryptarithmVerifier, Cryptarith
     public ComplexityClass complexityClass { get; } = ComplexityClass.NPComplete;
     public ProblemType problemType { get; } = ProblemType.SetsAndPartitions;
     public string[] contributors {get;} = { "Dani Sleight", "Brayden Weisbeck" };
+
+    public string sourceFile => throw new NotImplementedException();
+
     // Declared, not derived — do NOT infer this from which Problems/<Folder>/ this file
     // lives under. The folder is a filing convention only and is wrong for a dozen-plus
     // existing problems; declaring it explicitly here is the only source of truth the
@@ -43,6 +46,7 @@ class CRYPTARITHMS : IProblem<CryptarithmSolver, CryptarithmVerifier, Cryptarith
     // --- Properties ---
 
     // --- Methods and Constructors ---
+
     public CRYPTARITHMS() : this(_defaultInstance) {
 
     }

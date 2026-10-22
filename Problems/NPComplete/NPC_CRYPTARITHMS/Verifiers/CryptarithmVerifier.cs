@@ -21,7 +21,10 @@ class CryptarithmVerifier : IVerifier<CRYPTARITHMS> {
         }
     }
 
+    public string sourceFile = SourceFile.Path();
+
     // --- Methods Including Constructors ---
+
     public CryptarithmVerifier() {
         
     }
