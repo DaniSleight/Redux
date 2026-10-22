@@ -19,7 +19,7 @@ class CryptarithmVisualization : IVisualization<CRYPTARITHMS>
     public VisualizationType visualizationType { get; } = VisualizationType.Unimplemented;
     public ISolver solver { get; } = new CryptarithmSolver(); //TODO fill in solver to use for this visualization
 
-    public string sourceFile = SourceFile.Path();
+    public string sourceFile { get; } = SourceFile.Path();
 
     // --- Methods Including Constructors ---
 
